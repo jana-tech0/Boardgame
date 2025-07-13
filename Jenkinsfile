@@ -1,47 +1,32 @@
 pipeline {
     agent any
-
+    
     tools {
-        jdk 'jdk11'        // ✅ Must match the name in "Manage Jenkins > Global Tool Configuration"
-        maven 'maven3'     // ✅ Your configured Maven version name
+        maven 'maven3'
+        jdk 'jdk17'
     }
 
     stages {
+        
         stage('Compile') {
             steps {
-                echo '🔧 Compiling source code...'
-                sh 'mvn compile'
+             sh 'mvn compile'
             }
         }
-
-        stage('Test') {
+        stage('test') {
             steps {
-                echo '🧪 Running unit tests...'
                 sh 'mvn test'
             }
         }
-
         stage('Package') {
             steps {
-                echo '📦 Packaging the application...'
-                sh 'mvn package'
+               sh 'mvn package'
             }
         }
-
-        stage('Install') {
+        stage('Hello') {
             steps {
-                echo '📂 Installing to local Maven repo...'
-                sh 'mvn install'
+                echo 'Hello World'
             }
-        }
-    }
-
-    post {
-        success {
-            echo '✅ Build completed successfully.'
-        }
-        failure {
-            echo '❌ Build failed. Check the logs.'
         }
     }
 }
