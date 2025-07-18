@@ -117,15 +117,17 @@
 	</build>
 
 
-	 <distributionManagement>
-        <repository>
-            <id>maven-releases</id>
-            <url>http://13.201.64.186:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>maven-snapshots</id>
-            <url>http://13.201.64.186:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+	<distributionManagement>
+    <repository>
+      <id>releases-repo</id>
+      <name>My Maven Releases</name>
+      <url>http://3.6.91.30:8081/repository/maven-releases/</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots-repo</id>
+      <name>My Maven Snapshots</name>
+      <url>http://3.6.91.30:8081/repository/maven-snapshots/</url>
+    </snapshotRepository>
+  </distributionManagement>
 
 </project>
