@@ -133,11 +133,11 @@
 
     <distributionManagement>
   <repository>
-    <id>maven-releases</id>  <!-- Changed from nexus-releases -->
+    <id>maven-releases</id>
     <url>http://15.206.92.212:8081/repository/maven-releases/</url>
   </repository>
   <snapshotRepository>
-    <id>maven-snapshots</id>  <!-- Changed from nexus-snapshots -->
+    <id>maven-snapshots</id>
     <url>http://15.206.92.212:8081/repository/maven-snapshots/</url>
   </snapshotRepository>
 </distributionManagement>
