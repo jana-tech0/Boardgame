@@ -132,16 +132,14 @@
     </build>
 
     <distributionManagement>
-        <repository>
-            <id>nexus-releases</id>
-            <name>Nexus Release Repository</name>
-            <url>http://15.206.92.212:8081/repository/maven-releases/</url>
-        </repository>
-        <snapshotRepository>
-            <id>nexus-snapshots</id>
-            <name>Nexus Snapshot Repository</name>
-            <url>http://15.206.92.212:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-    </distributionManagement>
+  <repository>
+    <id>maven-releases</id>  <!-- Changed from nexus-releases -->
+    <url>http://15.206.92.212:8081/repository/maven-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>maven-snapshots</id>  <!-- Changed from nexus-snapshots -->
+    <url>http://15.206.92.212:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
+</distributionManagement>
 
 </project>
